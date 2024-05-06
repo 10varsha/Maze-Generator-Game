@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maze Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="page">
+      <div id="message-container">
+        <div id="message">
+          <h1>CONGARTULATIONS!</h1>
+          <p>You are done.</p>
+          <p id="moves"></p>
+          <input
+            type="text"
+            id="okBtn"
+            onclick="toggleVisibility('message-container')"
+            value="Cool!"
+          />
+        </div>
+      </div>
+
+      <br />
+      <div id="menu">
+        <div class="custom-select">
+          <select id="diffSelect">
+            <option value="10">Easy</option>
+            <option value="15">Medium</option>
+            <option value="25">Hard</option>
+            <option value="38">Extreme</option>
+          </select>
+        </div>
+        <input
+          id="startMazeBtn"
+          type="button"
+          onClick="makeMaze()"
+          value="Start"
+        />
+      </div>
+
+      <div id="view">
+        <div id="mazeContainer">
+          <canvas
+            id="mazeCanvas"
+            class="border"
+            height="1100"
+            width="1100"
+          ></canvas>
+        </div>
+      </div>
+
+      <p id="instructions">Use arror keys to move the key to the house.</p>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchswipe.min.js"
+    ></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
